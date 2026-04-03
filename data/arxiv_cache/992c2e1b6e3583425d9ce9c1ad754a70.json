@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "query_used": "all:hallucination AND all:control AND all:medical AND all:LLM AND all:QA",
+  "data": [
+    {
+      "title": "Correctness Coverage Evaluation for Medical Multiple-Choice Question Answering Based on the Enhanced Conformal Prediction Framework",
+      "authors": [
+        "Yusong Ke",
+        "Hongru Lin",
+        "Yuting Ruan",
+        "Junya Tang",
+        "Li Li"
+      ],
+      "published_date": "2025-03-07",
+      "pdf_url": "https://arxiv.org/pdf/2503.05505v2",
+      "summary": "Large language models (LLMs) are increasingly adopted in medical question-answering (QA) scenarios. However, LLMs can generate hallucinations and nonfactual information, undermining their trustworthiness in high-stakes medical tasks. Conformal Prediction (CP) provides a statistically rigorous framework for marginal (average) coverage guarantees but has limited exploration in medical QA. This paper proposes an enhanced CP framework for medical multiple-choice question-answering (MCQA) tasks. By associating the non-conformance score with the frequency score of correct options and leveraging self-consistency, the framework addresses internal model opacity and incorporates a risk control strategy with a monotonic loss function. Evaluated on MedMCQA, MedQA, and MMLU datasets using four off-the-shelf LLMs, the proposed method meets specified error rate guarantees while reducing average prediction set size with increased risk level, offering a promising uncertainty evaluation metric for LLMs."
+    }
+  ]
+}

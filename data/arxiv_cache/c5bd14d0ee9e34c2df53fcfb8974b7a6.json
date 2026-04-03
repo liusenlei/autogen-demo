@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "query_used": "all:medical AND all:vision AND all:language AND all:model AND all:input AND all:validation AND all:pre-diagnostic AND all:check",
+  "data": [
+    {
+      "title": "MedObvious: Exposing the Medical Moravec's Paradox in VLMs via Clinical Triage",
+      "authors": [
+        "Ufaq Khan",
+        "Umair Nawaz",
+        "L D M S S Teja",
+        "Numaan Saeed",
+        "Muhammad Bilal",
+        "Yutong Xie",
+        "Mohammad Yaqub",
+        "Muhammad Haris Khan"
+      ],
+      "published_date": "2026-03-24",
+      "pdf_url": "https://arxiv.org/pdf/2603.23501v1",
+      "summary": "Vision Language Models (VLMs) are increasingly used for tasks like medical report generation and visual question answering. However, fluent diagnostic text does not guarantee safe visual understanding. In clinical practice, interpretation begins with pre-diagnostic sanity checks: verifying that the input is valid to read (correct modality and anatomy, plausible viewpoint and orientation, and no obvious integrity violations). Existing benchmarks largely assume this step is solved, and therefore miss a critical failure mode: a model can produce plausible narratives even when the input is inconsistent or invalid. We introduce MedObvious, a 1,880-task benchmark that isolates input validation as a set-level consistency capability over small multi-panel image sets: the model must identify whether any panel violates expected coherence. MedObvious spans five progressive tiers, from basic orientation/modality mismatches to clinically motivated anatomy/viewpoint verification and triage-style cues, and includes five evaluation formats to test robustness across interfaces. Evaluating 17 different VLMs, we find that sanity checking remains unreliable: several models hallucinate anomalies on normal (negative-control) inputs, performance degrades when scaling to larger image sets, and measured accuracy varies substantially between multiple-choice and open-ended settings. These results show that pre-diagnostic verification remains unsolved for medical VLMs and should be treated as a distinct, safety-critical capability before deployment."
+    }
+  ]
+}

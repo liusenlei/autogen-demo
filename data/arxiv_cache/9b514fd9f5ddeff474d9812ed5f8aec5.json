@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "query_used": "all:semantic AND all:entropy AND all:hallucination AND all:detection AND all:LLM AND all:computational AND all:cost",
+  "data": [
+    {
+      "title": "VideoHEDGE: Entropy-Based Hallucination Detection for Video-VLMs via Semantic Clustering and Spatiotemporal Perturbations",
+      "authors": [
+        "Sushant Gautam",
+        "Cise Midoglu",
+        "Vajira Thambawita",
+        "Michael A. Riegler",
+        "Pål Halvorsen"
+      ],
+      "published_date": "2026-01-13",
+      "pdf_url": "https://arxiv.org/pdf/2601.08557v1",
+      "summary": "Hallucinations in video-capable vision-language models (Video-VLMs) remain frequent and high-confidence, while existing uncertainty metrics often fail to align with correctness. We introduce VideoHEDGE, a modular framework for hallucination detection in video question answering that extends entropy-based reliability estimation from images to temporally structured inputs. Given a video-question pair, VideoHEDGE draws a baseline answer and multiple high-temperature generations from both clean clips and photometrically and spatiotemporally perturbed variants, then clusters the resulting textual outputs into semantic hypotheses using either Natural Language Inference (NLI)-based or embedding-based methods. Cluster-level probability masses yield three reliability scores: Semantic Entropy (SE), RadFlag, and Vision-Amplified Semantic Entropy (VASE). We evaluate VideoHEDGE on the SoccerChat benchmark using an LLM-as-a-judge to obtain binary hallucination labels. Across three 7B Video-VLMs (Qwen2-VL, Qwen2.5-VL, and a SoccerChat-finetuned model), VASE consistently achieves the highest ROC-AUC, especially at larger distortion budgets, while SE and RadFlag often operate near chance. We further show that embedding-based clustering matches NLI-based clustering in detection performance at substantially lower computational cost, and that domain fine-tuning reduces hallucination frequency but yields only modest improvements in calibration. The hedge-bench PyPI library enables reproducible and extensible benchmarking, with full code and experimental resources available at https://github.com/Simula/HEDGE#videohedge ."
+    },
+    {
+      "title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+      "authors": [
+        "Jannik Kossen",
+        "Jiatong Han",
+        "Muhammed Razzak",
+        "Lisa Schut",
+        "Shreshth Malik",
+        "Yarin Gal"
+      ],
+      "published_date": "2024-06-22",
+      "pdf_url": "https://arxiv.org/pdf/2406.15927v1",
+      "summary": "We propose semantic entropy probes (SEPs), a cheap and reliable method for uncertainty quantification in Large Language Models (LLMs). Hallucinations, which are plausible-sounding but factually incorrect and arbitrary model generations, present a major challenge to the practical adoption of LLMs. Recent work by Farquhar et al. (2024) proposes semantic entropy (SE), which can detect hallucinations by estimating uncertainty in the space semantic meaning for a set of model generations. However, the 5-to-10-fold increase in computation cost associated with SE computation hinders practical adoption. To address this, we propose SEPs, which directly approximate SE from the hidden states of a single generation. SEPs are simple to train and do not require sampling multiple model generations at test time, reducing the overhead of semantic uncertainty quantification to almost zero. We show that SEPs retain high performance for hallucination detection and generalize better to out-of-distribution data than previous probing methods that directly predict model accuracy. Our results across models and tasks suggest that model hidden states capture SE, and our ablation studies give further insights into the token positions and model layers for which this is the case."
+    }
+  ]
+}

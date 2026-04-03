@@ -1,0 +1,73 @@
+{
+  "status": "success",
+  "query_used": "all:mitigating AND all:hallucination AND all:medical AND all:large AND all:language AND all:models",
+  "data": [
+    {
+      "title": "Mitigating Object Hallucinations in LVLMs via Attention Imbalance Rectification",
+      "authors": [
+        "Han Sun",
+        "Qin Li",
+        "Peixin Wang",
+        "Min Zhang"
+      ],
+      "published_date": "2026-03-25",
+      "pdf_url": "https://arxiv.org/pdf/2603.24058v1",
+      "summary": "Object hallucination in Large Vision-Language Models (LVLMs) severely compromises their reliability in real-world applications, posing a critical barrier to their deployment in high-stakes scenarios such as autonomous driving and medical image analysis. Through systematic empirical investigation, we identify that the imbalanced attention allocation, both across modalities (i.e., vision and language) and within modalities (among individual tokens), exhibits a strong causal correlation with the occurrence of object hallucination. Leveraging this insight, we introduce a novel concept termed attention imbalance, which not only quantifies the degree of attention disparity but also visually delineates the underlying patterns (e.g., over-attentiveness to irrelevant language tokens or under-attentiveness to discriminative visual features) that drive object hallucination. To mitigate object hallucination, we further propose Attention Imbalance Rectification (AIR), a lightweight decoding-time intervention method that reallocates attention weights and adjusts attention distributions to rectify modality-wise and token-wise imbalances. Extensive evaluations on four mainstream LVLMs and three benchmarks (CHAIR, POPE, and MM-Vet) with seven baselines demonstrate that AIR consistently reduces object hallucination rates, achieving up to a 35.1% reduction compared to the baselines, while improving up to 15.9% of LVLMs' general capability across diverse vision-language tasks."
+    },
+    {
+      "title": "Unleashing Video Language Models for Fine-grained HRCT Report Generation",
+      "authors": [
+        "Yingying Fang",
+        "Huichi Zhou",
+        "KinHei Lee",
+        "Yijia Wang",
+        "Zhenxuan Zhang",
+        "Jiahao Huang",
+        "Guang Yang"
+      ],
+      "published_date": "2026-03-12",
+      "pdf_url": "https://arxiv.org/pdf/2603.12469v2",
+      "summary": "Generating precise diagnostic reports from High-Resolution Computed Tomography (HRCT) is critical for clinical workflow, yet it remains a formidable challenge due to the high pathological diversity and spatial sparsity within 3D volumes. While Video Language Models (VideoLMs) have demonstrated remarkable spatio-temporal reasoning in general domains, their adaptability to domain-specific, high-volume medical interpretation remains underexplored. In this work, we present AbSteering, an abnormality-centric framework that steers VideoLMs toward precise HRCT report generation. Specifically, AbSteering introduces: (i) an abnormality-centric Chain-of-Thought scheme that enforces abnormality reasoning, and (ii) a Direct Preference Optimization objective that utilizes clinically confusable abnormalities as hard negatives to enhance fine-grained discrimination. Our results demonstrate that general-purpose VideoLMs possess strong transferability to high-volume medical imaging when guided by this paradigm. Notably, AbSteering outperforms state-of-the-art domain-specific CT foundation models, which are pretrained with large-scale CTs, achieving superior detection sensitivity while simultaneously mitigating hallucinations."
+    },
+    {
+      "title": "LLM-Confidence Reranker: A Training-Free Approach for Enhancing Retrieval-Augmented Generation Systems",
+      "authors": [
+        "Zhipeng Song",
+        "Xiangyu Kong",
+        "Xinrui Bao",
+        "Yizhi Zhou",
+        "Jiulong Jiao",
+        "Sitong Liu",
+        "Yuhang Zhou",
+        "Heng Qi"
+      ],
+      "published_date": "2026-02-14",
+      "pdf_url": "https://arxiv.org/pdf/2602.13571v1",
+      "summary": "Large language models (LLMs) have revolutionized natural language processing, yet hallucinations in knowledge-intensive tasks remain a critical challenge. Retrieval-augmented generation (RAG) addresses this by integrating external knowledge, but its efficacy depends on accurate document retrieval and ranking. Although existing rerankers demonstrate effectiveness, they frequently necessitate specialized training, impose substantial computational expenses, and fail to fully exploit the semantic capabilities of LLMs, particularly their inherent confidence signals. We propose the LLM-Confidence Reranker (LCR), a training-free, plug-and-play algorithm that enhances reranking in RAG systems by leveraging black-box LLM confidence derived from Maximum Semantic Cluster Proportion (MSCP). LCR employs a two-stage process: confidence assessment via multinomial sampling and clustering, followed by binning and multi-level sorting based on query and document confidence thresholds. This approach prioritizes relevant documents while preserving original rankings for high-confidence queries, ensuring robustness. Evaluated on BEIR and TREC benchmarks with BM25 and Contriever retrievers, LCR--using only 7--9B-parameter pre-trained LLMs--consistently improves NDCG@5 by up to 20.6% across pre-trained LLM and fine-tuned Transformer rerankers, without degradation. Ablation studies validate the hypothesis that LLM confidence positively correlates with document relevance, elucidating LCR's mechanism. LCR offers computational efficiency, parallelism for scalability, and broad compatibility, mitigating hallucinations in applications like medical diagnosis."
+    },
+    {
+      "title": "Thinking Like a Radiologist: A Dataset for Anatomy-Guided Interleaved Vision Language Reasoning in Chest X-ray Interpretation",
+      "authors": [
+        "Yichen Zhao",
+        "Zelin Peng",
+        "Piao Yang",
+        "Xiaokang Yang",
+        "Wei Shen"
+      ],
+      "published_date": "2026-02-13",
+      "pdf_url": "https://arxiv.org/pdf/2602.12843v1",
+      "summary": "Radiological diagnosis is a perceptual process in which careful visual inspection and language reasoning are repeatedly interleaved. Most medical large vision language models (LVLMs) perform visual inspection only once and then rely on text-only chain-of-thought (CoT) reasoning, which operates purely in the linguistic space and is prone to hallucination. Recent methods attempt to mitigate this issue by introducing visually related coordinates, such as bounding boxes. However, these remain a pseudo-visual solution: coordinates are still text and fail to preserve rich visual details like texture and density. Motivated by the interleaved nature of radiological diagnosis, we introduce MMRad-IVL-22K, the first large-scale dataset designed for natively interleaved visual language reasoning in chest X-ray interpretation. MMRad-IVL-22K reflects a repeated cycle of reasoning and visual inspection workflow of radiologists, in which visual rationales complement textual descriptions and ground each step of the reasoning process. MMRad-IVL-22K comprises 21,994 diagnostic traces, enabling systematic scanning across 35 anatomical regions. Experimental results on advanced closed-source LVLMs demonstrate that report generation guided by multimodal CoT significantly outperforms that guided by text-only CoT in clinical accuracy and report quality (e.g., 6\\% increase in the RadGraph metric), confirming that high-fidelity interleaved vision language evidence is a non-substitutable component of reliable medical AI. Furthermore, benchmarking across seven state-of-the-art open-source LVLMs demonstrates that models fine-tuned on MMRad-IVL-22K achieve superior reasoning consistency and report quality compared with both general-purpose and medical-specific LVLMs. The project page is available at https://github.com/qiuzyc/thinking_like_a_radiologist."
+    },
+    {
+      "title": "Quantifying Hallucinations in Language Language Models on Medical Textbooks",
+      "authors": [
+        "Brandon C. Colelough",
+        "Davis Bartels",
+        "Dina Demner-Fushman"
+      ],
+      "published_date": "2026-02-12",
+      "pdf_url": "https://arxiv.org/pdf/2603.09986v1",
+      "summary": "Hallucinations, the tendency for large language models to provide responses with factually incorrect and unsupported claims, is a serious problem within natural language processing for which we do not yet have an effective solution to mitigate against. Existing benchmarks for medical QA rarely evaluate this behavior against a fixed evidence source. We ask how often hallucinations occur on textbook-grounded QA and how responses to medical QA prompts vary across models. We conduct two experiments: the first experiment to determine the prevalence of hallucinations for a prominent open source large language model (LLaMA-70B-Instruct) in medical QA given novel prompts, and the second experiment to determine the prevalence of hallucinations and clinician preference to model responses. We observed, in experiment one, with the passages provided, LLaMA-70B-Instruct hallucinated in 19.7\\% of answers (95\\% CI 18.6 to 20.7) even though 98.8\\% of prompt responses received maximal plausibility, and observed in experiment two, across models, lower hallucination rates aligned with higher usefulness scores ($ρ=-0.71$, $p=0.058$). Clinicians produced high agreement (quadratic weighted $κ=0.92$) and ($τ_b=0.06$ to $0.18$, $κ=0.57$ to $0.61$) for experiments 1 and ,2 respectively"
+    }
+  ]
+}

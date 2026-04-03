@@ -1,0 +1,124 @@
+{
+  "status": "success",
+  "query_used": "all:automated AND all:clinical AND all:documentation AND all:LLM AND all:hallucination",
+  "data": [
+    {
+      "title": "AgenticSum: An Agentic Inference-Time Framework for Faithful Clinical Text Summarization",
+      "authors": [
+        "Fahmida Liza Piya",
+        "Rahmatollah Beheshti"
+      ],
+      "published_date": "2026-02-23",
+      "pdf_url": "https://arxiv.org/pdf/2602.20040v1",
+      "summary": "Large language models (LLMs) offer substantial promise for automating clinical text summarization, yet maintaining factual consistency remains challenging due to the length, noise, and heterogeneity of clinical documentation. We present AgenticSum, an inference-time, agentic framework that separates context selection, generation, verification, and targeted correction to reduce hallucinated content. The framework decomposes summarization into coordinated stages that compress task-relevant context, generate an initial draft, identify weakly supported spans using internal attention grounding signals, and selectively revise flagged content under supervisory control. We evaluate AgenticSum on two public datasets, using reference-based metrics, LLM-as-a-judge assessment, and human evaluation. Across various measures, AgenticSum demonstrates consistent improvements compared to vanilla LLMs and other strong baselines. Our results indicate that structured, agentic design with targeted correction offers an effective inference time solution to improve clinical note summarization using LLMs."
+    },
+    {
+      "title": "Adoption and Use of LLMs at an Academic Medical Center",
+      "authors": [
+        "Nigam H. Shah",
+        "Nerissa Ambers",
+        "Abby Pandya",
+        "Timothy Keyes",
+        "Juan M. Banda",
+        "Srikar Nallan",
+        "Carlene Lugtu",
+        "Artem A. Trotsyuk",
+        "Suhana Bedi",
+        "Alyssa Unell",
+        "Miguel Fuentes",
+        "Francois Grolleau",
+        "Sneha S. Jain",
+        "Jonathan Chen",
+        "Devdutta Dash",
+        "Danton Char",
+        "Aditya Sharma",
+        "Duncan McElfresh",
+        "Patrick Scully",
+        "Vishanthan Kumar",
+        "Connor OBrien",
+        "Satchi Mouniswamy",
+        "Elvis Jones",
+        "Krishna Jasti",
+        "Gunavathi Mannika Lakshmanan",
+        "Sree Ram Akula",
+        "Varun Kumar Singh",
+        "Ramesh Rajmanickam",
+        "Sudhir Sinha",
+        "Vicky Zhou",
+        "Xu Wang",
+        "Bilal Mawji",
+        "Joshua Ge",
+        "Wencheng Li",
+        "Travis Lyons",
+        "Jarrod Helzer",
+        "Vikas Kakkar",
+        "Ramesh Powar",
+        "Darren Batara",
+        "Cheryl Cordova",
+        "William Frederick",
+        "Olivia Tang",
+        "Phoebe Morgan",
+        "April S. Liang",
+        "Stephen P. Ma",
+        "Shivam Vedak",
+        "Dong-han Yao",
+        "Akshay Swaminathan",
+        "Mehr Kashyap",
+        "Brian Ng",
+        "Jamie Hellman",
+        "Nikesh Kotecha",
+        "Christopher Sharp",
+        "Gretchen Brown",
+        "Christian Lindmark",
+        "Anurang Revri",
+        "Michael A. Pfeffer"
+      ],
+      "published_date": "2026-01-21",
+      "pdf_url": "https://arxiv.org/pdf/2602.00074v1",
+      "summary": "While large language models (LLMs) can support clinical documentation needs, standalone tools struggle with \"workflow friction\" from manual data entry. We developed ChatEHR, a system that enables the use of LLMs with the entire patient timeline spanning several years. ChatEHR enables automations - which are static combinations of prompts and data that perform a fixed task - and interactive use in the electronic health record (EHR) via a user interface (UI). The resulting ability to sift through patient medical records for diverse use-cases such as pre-visit chart review, screening for transfer eligibility, monitoring for surgical site infections, and chart abstraction, redefines LLM use as an institutional capability. This system, accessible after user-training, enables continuous monitoring and evaluation of LLM use.   In 1.5 years, we built 7 automations and 1075 users have trained to become routine users of the UI, engaging in 23,000 sessions in the first 3 months of launch. For automations, being model-agnostic and accessing multiple types of data was essential for matching specific clinical or administrative tasks with the most appropriate LLM. Benchmark-based evaluations proved insufficient for monitoring and evaluation of the UI, requiring new methods to monitor performance. Generation of summaries was the most frequent task in the UI, with an estimated 0.73 hallucinations and 1.60 inaccuracies per generation. The resulting mix of cost savings, time savings, and revenue growth required a value assessment framework to prioritize work as well as quantify the impact of using LLMs. Initial estimates are $6M savings in the first year of use, without quantifying the benefit of the better care offered. Such a \"build-from-within\" strategy provides an opportunity for health systems to maintain agency via a vendor-agnostic, internally governed LLM platform."
+    },
+    {
+      "title": "Leveraging Large Language Models to Extract and Translate Medical Information in Doctors' Notes for Health Records and Diagnostic Billing Codes",
+      "authors": [
+        "Peter Hartnett",
+        "Chung-Chi Huang",
+        "Sarah Hartnett",
+        "David Hartnett"
+      ],
+      "published_date": "2026-01-14",
+      "pdf_url": "https://arxiv.org/pdf/2603.22625v1",
+      "summary": "Physician burnout in the United States has reached critical levels, driven in part by the administrative burden of Electronic Health Record (EHR) documentation and complex diagnostic codes. To relieve this strain and maintain strict patient privacy, this thesis explores an on-device, offline automatic medical coding system. The work focuses on using open-weight Large Language Models (LLMs) to extract clinical information from physician notes and translate it into ICD-10-CM diagnostic codes without reliance on cloud-based services.   A privacy-focused pipeline was developed using Ollama, LangChain, and containerized environments to evaluate multiple open-weight models, including Llama 3.2, Mistral, Phi, and DeepSeek, on consumer-grade hardware. Model performance was assessed for zero-shot, few-shot, and retrieval-augmented generation (RAG) prompting strategies using a novel benchmark of synthetic medical notes.   Results show that strict JSON schema enforcement achieved near 100% formatting compliance, but accurate generation of specific diagnostic codes remains challenging for smaller local models (7B-20B parameters). Contrary to common prompt-engineering guidance, few-shot prompting degraded performance through overfitting and hallucinations. While RAG enabled limited discovery of unseen codes, it frequently saturated context windows, reducing overall accuracy. The findings suggest that fully automated unsupervised coding with local open-source models is not yet reliable; instead, a human-in-the-loop assisted coding approach is currently the most practical path forward. This work contributes a reproducible local LLM architecture and benchmark dataset for privacy-preserving medical information extraction and coding."
+    },
+    {
+      "title": "Large Language Model-Based Generation of Discharge Summaries",
+      "authors": [
+        "Tiago Rodrigues",
+        "Carla Teixeira Lopes"
+      ],
+      "published_date": "2025-12-07",
+      "pdf_url": "https://arxiv.org/pdf/2512.06812v1",
+      "summary": "Discharge Summaries are documents written by medical professionals that detail a patient's visit to a care facility. They contain a wealth of information crucial for patient care, and automating their generation could significantly reduce the effort required from healthcare professionals, minimize errors, and ensure that critical patient information is easily accessible and actionable. In this work, we explore the use of five Large Language Models on this task, from open-source models (Mistral, Llama 2) to proprietary systems (GPT-3, GPT-4, Gemini 1.5 Pro), leveraging MIMIC-III summaries and notes. We evaluate them using exact-match, soft-overlap, and reference-free metrics. Our results show that proprietary models, particularly Gemini with one-shot prompting, outperformed others, producing summaries with the highest similarity to the gold-standard ones. Open-source models, while promising, especially Mistral after fine-tuning, lagged in performance, often struggling with hallucinations and repeated information. Human evaluation by a clinical expert confirmed the practical utility of the summaries generated by proprietary models. Despite the challenges, such as hallucinations and missing information, the findings suggest that LLMs, especially proprietary models, are promising candidates for automatic discharge summary generation as long as data privacy is ensured."
+    },
+    {
+      "title": "Improving Reliability and Explainability of Medical Question Answering through Atomic Fact Checking in Retrieval-Augmented LLMs",
+      "authors": [
+        "Juraj Vladika",
+        "Annika Domres",
+        "Mai Nguyen",
+        "Rebecca Moser",
+        "Jana Nano",
+        "Felix Busch",
+        "Lisa C. Adams",
+        "Keno K. Bressem",
+        "Denise Bernhardt",
+        "Stephanie E. Combs",
+        "Kai J. Borm",
+        "Florian Matthes",
+        "Jan C. Peeken"
+      ],
+      "published_date": "2025-05-30",
+      "pdf_url": "https://arxiv.org/pdf/2505.24830v3",
+      "summary": "Large language models (LLMs) exhibit extensive medical knowledge but are prone to hallucinations and inaccurate citations, which pose a challenge to their clinical adoption and regulatory compliance. Current methods, such as Retrieval Augmented Generation, partially address these issues by grounding answers in source documents, but hallucinations and low fact-level explainability persist. In this work, we introduce a novel atomic fact-checking framework designed to enhance the reliability and explainability of LLMs used in medical long-form question answering. This method decomposes LLM-generated responses into discrete, verifiable units called atomic facts, each of which is independently verified against an authoritative knowledge base of medical guidelines. This approach enables targeted correction of errors and direct tracing to source literature, thereby improving the factual accuracy and explainability of medical Q&A. Extensive evaluation using multi-reader assessments by medical experts and an automated open Q&A benchmark demonstrated significant improvements in factual accuracy and explainability. Our framework achieved up to a 40% overall answer improvement and a 50% hallucination detection rate. The ability to trace each atomic fact back to the most relevant chunks from the database provides a granular, transparent explanation of the generated responses, addressing a major gap in current medical AI applications. This work represents a crucial step towards more trustworthy and reliable clinical applications of LLMs, addressing key prerequisites for clinical application and fostering greater confidence in AI-assisted healthcare."
+    }
+  ]
+}

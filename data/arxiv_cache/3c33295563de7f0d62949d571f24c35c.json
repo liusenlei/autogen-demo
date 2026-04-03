@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "query_used": "all:hallucination AND all:mitigation AND all:clinical AND all:note AND all:generation AND all:LLM",
+  "data": [
+    {
+      "title": "Overview of TREC 2024 Biomedical Generative Retrieval (BioGen) Track",
+      "authors": [
+        "Deepak Gupta",
+        "Dina Demner-Fushman",
+        "William Hersh",
+        "Steven Bedrick",
+        "Kirk Roberts"
+      ],
+      "published_date": "2024-11-27",
+      "pdf_url": "https://arxiv.org/pdf/2411.18069v2",
+      "summary": "With the advancement of large language models (LLMs), the biomedical domain has seen significant progress and improvement in multiple tasks such as biomedical question answering, lay language summarization of the biomedical literature, clinical note summarization, etc. However, hallucinations or confabulations remain one of the key challenges when using LLMs in the biomedical and other domains. Inaccuracies may be particularly harmful in high-risk situations, such as medical question answering, making clinical decisions, or appraising biomedical research. Studies on the evaluation of the LLMs abilities to ground generated statements in verifiable sources have shown that models perform significantly worse on lay-user-generated questions, and often fail to reference relevant sources. This can be problematic when those seeking information want evidence from studies to back up the claims from LLMs. Unsupported statements are a major barrier to using LLMs in any applications that may affect health. Methods for grounding generated statements in reliable sources along with practical evaluation approaches are needed to overcome this barrier. Towards this, in our pilot task organized at TREC 2024, we introduced the task of reference attribution as a means to mitigate the generation of false statements by LLMs answering biomedical questions."
+    },
+    {
+      "title": "Large Language Models Powered Multiagent Ensemble for Mitigating Hallucination and Efficient Atrial Fibrillation Annotation of ECG Reports",
+      "authors": [
+        "Jingwei Huang",
+        "Kuroush Nezafati",
+        "Ismael Villanueva-Miranda",
+        "Zifan Gu",
+        "Yueshuang Xu",
+        "Ann Marie Navar",
+        "Tingyi Wanyan",
+        "Qin Zhou",
+        "Bo Yao",
+        "Ruichen Rong",
+        "Xiaowei Zhan",
+        "Guanghua Xiao",
+        "Eric D. Peterson",
+        "Donghan M. Yang",
+        "Wenqi Shi",
+        "Yang Xie"
+      ],
+      "published_date": "2024-10-21",
+      "pdf_url": "https://arxiv.org/pdf/2410.16543v3",
+      "summary": "This study introduces a LLMs powered multiagent ensemble method to address challenges in hallucination and data labeling, particularly in large-scale EHR datasets. Manual labeling of such datasets requires domain expertise and is labor-intensive, time-consuming, expensive, and error-prone. To overcome this bottleneck, we developed an ensemble LLMs method and demonstrated its effectiveness in two real-world tasks: (1) labeling a large-scale unlabeled ECG dataset in MIMIC-IV; (2) identifying social determinants of health (SDOH) from the clinical notes of EHR. Trading off benefits and cost, we selected a pool of diverse open source LLMs with satisfactory performance. We treat each LLM's prediction as a vote and apply a mechanism of majority voting with minimal winning threshold for ensemble. We implemented an ensemble LLMs application for EHR data labeling tasks. By using the ensemble LLMs and natural language processing, we labeled MIMIC-IV ECG dataset of 623,566 ECG reports with an estimated accuracy of 98.2%. We applied the ensemble LLMs method to identify SDOH from social history sections of 1,405 EHR clinical notes, also achieving competitive performance. Our experiments show that the ensemble LLMs can outperform individual LLM even the best commercial one, and the method reduces hallucination errors. From the research, we found that (1) the ensemble LLMs method significantly reduces the time and effort required for labeling large-scale EHR data, automating the process with high accuracy and quality; (2) the method generalizes well to other text data labeling tasks, as shown by its application to SDOH identification; (3) the ensemble of a group of diverse LLMs can outperform or match the performance of the best individual LLM; and (4) the ensemble method substantially reduces hallucination errors. This approach provides a scalable and efficient solution to data-labeling challenges."
+    }
+  ]
+}

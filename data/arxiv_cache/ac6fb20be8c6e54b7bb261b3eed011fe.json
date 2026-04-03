@@ -1,0 +1,80 @@
+{
+  "status": "success",
+  "query_used": "all:Reinforcement AND all:learning AND all:medical AND all:diagnosis",
+  "data": [
+    {
+      "title": "Reaching Beyond the Mode: RL for Distributional Reasoning in Language Models",
+      "authors": [
+        "Isha Puri",
+        "Mehul Damani",
+        "Idan Shenfeld",
+        "Marzyeh Ghassemi",
+        "Jacob Andreas",
+        "Yoon Kim"
+      ],
+      "published_date": "2026-03-25",
+      "pdf_url": "https://arxiv.org/pdf/2603.24844v1",
+      "summary": "Given a question, a language model (LM) implicitly encodes a distribution over possible answers. In practice, post-training procedures for LMs often collapse this distribution onto a single dominant mode. While this is generally not a problem for benchmark-style evaluations that assume one correct answer, many real-world tasks inherently involve multiple valid answers or irreducible uncertainty. Examples include medical diagnosis, ambiguous question answering, and settings with incomplete information. In these cases, we would like LMs to generate multiple plausible hypotheses, ideally with confidence estimates for each one, and without computationally intensive repeated sampling to generate non-modal answers. This paper describes a multi-answer reinforcement learning approach for training LMs to perform distributional reasoning over multiple answers during inference. We modify the RL objective to enable models to explicitly generate multiple candidate answers in a single forward pass, internalizing aspects of inference-time search into the model's generative process. Across question-answering, medical diagnostic, and coding benchmarks, we observe improved diversity, coverage, and set-level calibration scores compared to single answer trained baselines. Models trained with our approach require fewer tokens to generate multiple answers than competing approaches. On coding tasks, they are also substantially more accurate. These results position multi-answer RL as a principled and compute-efficient alternative to inference-time scaling procedures such as best-of-k. Code and more information can be found at https://multi-answer-rl.github.io/."
+    },
+    {
+      "title": "MedCausalX: Adaptive Causal Reasoning with Self-Reflection for Trustworthy Medical Vision-Language Models",
+      "authors": [
+        "Jianxin Lin",
+        "Chunzheng Zhu",
+        "Peter J. Kneuertz",
+        "Yunfei Bai",
+        "Yuan Xue"
+      ],
+      "published_date": "2026-03-24",
+      "pdf_url": "https://arxiv.org/pdf/2603.23085v1",
+      "summary": "Vision-Language Models (VLMs) have enabled interpretable medical diagnosis by integrating visual perception with linguistic reasoning. Yet, existing medical chain-of-thought (CoT) models lack explicit mechanisms to represent and enforce causal reasoning, leaving them vulnerable to spurious correlations and limiting their clinical reliability. We pinpoint three core challenges in medical CoT reasoning: how to adaptively trigger causal correction, construct high-quality causal-spurious contrastive samples, and maintain causal consistency across reasoning trajectories. To address these challenges, we propose MedCausalX, an end-to-end framework explicitly models causal reasoning chains in medical VLMs. We first introduce the CRMed dataset providing fine-grained anatomical annotations, structured causal reasoning chains, and counterfactual variants that guide the learning of causal relationships beyond superficial correlations. Building upon CRMed, MedCausalX employs a two-stage adaptive reflection architecture equipped with $\\langle$causal$\\rangle$ and $\\langle$verify$\\rangle$ tokens, enabling the model to autonomously determine when and how to perform causal analysis and verification. Finally, a trajectory-level causal correction objective optimized through error-attributed reinforcement learning refines the reasoning chain, allowing the model to distinguish genuine causal dependencies from shortcut associations. Extensive experiments on multiple benchmarks show that MedCausalX consistently outperforms state-of-the-art methods, improving diagnostic consistency by +5.4 points, reducing hallucination by over 10 points, and attaining top spatial grounding IoU, thereby setting a new standard for causally grounded medical reasoning."
+    },
+    {
+      "title": "Anatomical Prior-Driven Framework for Autonomous Robotic Cardiac Ultrasound Standard View Acquisition",
+      "authors": [
+        "Zhiyan Cao",
+        "Zhengxi Wu",
+        "Yiwei Wang",
+        "Pei-Hsuan Lin",
+        "Li Zhang",
+        "Zhen Xie",
+        "Huan Zhao",
+        "Han Ding"
+      ],
+      "published_date": "2026-03-22",
+      "pdf_url": "https://arxiv.org/pdf/2603.21134v1",
+      "summary": "Cardiac ultrasound diagnosis is critical for cardiovascular disease assessment, but acquiring standard views remains highly operator-dependent. Existing medical segmentation models often yield anatomically inconsistent results in images with poor textural differentiation between distinct feature classes, while autonomous probe adjustment methods either rely on simplistic heuristic rules or black-box learning. To address these issues, our study proposed an anatomical prior (AP)-driven framework integrating cardiac structure segmentation and autonomous probe adjustment for standard view acquisition. A YOLO-based multi-class segmentation model augmented by a spatial-relation graph (SRG) module is designed to embed AP into the feature pyramid. Quantifiable anatomical features of standard views are extracted. Their priors are fitted to Gaussian distributions to construct probabilistic APs. The probe adjustment process of robotic ultrasound scanning is formalized as a reinforcement learning (RL) problem, with the RL state built from real-time anatomical features and the reward reflecting the AP matching. Experiments validate the efficacy of the framework. The SRG-YOLOv11s improves mAP50 by 11.3% and mIoU by 6.8% on the Special Case dataset, while the RL agent achieves a 92.5% success rate in simulation and 86.7% in phantom experiments."
+    },
+    {
+      "title": "Clinical Cognition Alignment for Gastrointestinal Diagnosis with Multimodal LLMs",
+      "authors": [
+        "Huan Zheng",
+        "Yucheng Zhou",
+        "Tianyi Yan",
+        "Dubing Chen",
+        "Hongbo Lu",
+        "Wenlong Liao",
+        "Tao He",
+        "Pai Peng",
+        "Jianbing Shen"
+      ],
+      "published_date": "2026-03-21",
+      "pdf_url": "https://arxiv.org/pdf/2603.20698v1",
+      "summary": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable potential in medical image analysis. However, their application in gastrointestinal endoscopy is currently hindered by two critical limitations: the misalignment between general model reasoning and standardized clinical cognitive pathways, and the lack of causal association between visual features and diagnostic outcomes. In this paper, we propose a novel Clinical-Cognitive-Aligned (CogAlign) framework to address these challenges. First, we endow the model with rigorous clinical analytical capabilities by constructing the hierarchical clinical cognition dataset and employing Supervised Fine-Tuning (SFT). Unlike conventional approaches, this strategy internalizes the hierarchical diagnostic logic of experts, ranging from anatomical localization and morphological evaluation to microvascular analysis, directly into the model. Second, to eliminate visual bias, we provide a theoretical analysis demonstrating that standard supervised tuning inevitably converges to spurious background correlations. Guided by this insight, we propose a counterfactual-driven reinforcement learning strategy to enforce causal rectification. By generating counterfactual normal samples via lesion masking and optimizing through clinical-cognition-centric rewards, we constrain the model to strictly ground its diagnosis in causal lesion features. Extensive experiments demonstrate that our approach achieves State-of-the-Art (SoTA) performance across multiple benchmarks, significantly enhancing diagnostic accuracy in complex clinical scenarios. All source code and datasets will be made publicly available."
+    },
+    {
+      "title": "MIND: Unified Inquiry and Diagnosis RL with Criteria Grounded Clinical Supports for Psychiatric Consultation",
+      "authors": [
+        "Guoyi Li",
+        "Shihao Xu",
+        "Jiatong Ma",
+        "Yunyun Han",
+        "Jianhua Chen",
+        "Yafeng Deng"
+      ],
+      "published_date": "2026-03-04",
+      "pdf_url": "https://arxiv.org/pdf/2603.03677v1",
+      "summary": "Large language models (LLMs) have advanced medical dialogue systems, yet psychiatric consultation poses substantially higher demands due to subjective ambiguity and comorbidity complexity: an agent must continuously extract psychopathological cues from incomplete and inconsistent patient reports in multi-turn interactions and perform rigorous differential diagnostic reasoning. However, existing methods face two fundamental challenges. First, without criteria-grounded clinical supports, they are prone to unsupported clinical assertions when symptoms are atypical or underspecified. Second, in multi-turn interactions, they struggle to mitigate inquiry drift (off-topic or low-yield questioning) and optimize questioning strategies. To address these challenges, we propose MIND, a unified inquiry--diagnosis reinforcement learning framework for psychiatric consultation. Specifically, we build a Criteria-Grounded Psychiatric Reasoning Bank (PRB) that summarizes dialogue context into clinical retrieval states, retrieves semantically similar reference consultations, and distills reusable criteria-grounded clinical supports to guide criteria-aligned inquiry and reasoning. Building on this foundation, MIND enforces explicit clinical reasoning with rubric-based process rewards to provide fine-grained supervision over intermediate decision steps, and incorporates a value-aware trajectory rectification mechanism to jointly improve information acquisition and diagnostic decision-making across turns. Extensive experiments demonstrate that MIND consistently outperforms strong baselines in diagnostic accuracy, empathetic interaction quality, interpretability, and generalization."
+    }
+  ]
+}

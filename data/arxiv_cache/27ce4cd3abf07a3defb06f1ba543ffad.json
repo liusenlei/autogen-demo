@@ -1,0 +1,78 @@
+{
+  "status": "success",
+  "query_used": "all:hallucination AND all:medical AND all:large AND all:language AND all:models",
+  "data": [
+    {
+      "title": "Learning Diagnostic Reasoning for Decision Support in Toxicology",
+      "authors": [
+        "Nico Oberländer",
+        "David Bani-Harouni",
+        "Tobias Zellner",
+        "Nassir Navab",
+        "Florian Eyer",
+        "Matthias Keicher"
+      ],
+      "published_date": "2026-03-31",
+      "pdf_url": "https://arxiv.org/pdf/2603.29608v1",
+      "summary": "Acute poly-substance intoxication requires rapid, life-saving decisions under substantial uncertainty, as clinicians must rely on incomplete ingestion details and nonspecific symptoms. Effective diagnostic reasoning in this chaotic environment requires fusing unstructured, non-medical narratives (e.g. paramedic scene descriptions and unreliable patient self-reports or known histories), with structured medical data like vital signs. While Large Language Models (LLMs) show potential for processing such heterogeneous inputs, they struggle in this setting, often underperforming simple baselines that rely solely on patient histories. To address this, we present DeToxR (Decision-support for Toxicology with Reasoning), the first adaptation of Reinforcement Learning (RL) to emergency toxicology. We design a robust data-fusion engine for multi-label prediction across 14 substance classes based on an LLM finetuned with Group Relative Policy Optimization (GRPO). We optimize the model's reasoning directly using a clinical performance reward. By formulating a multi-label agreement metric as the reward signal, the model is explicitly penalized for missing co-ingested substances and hallucinating absent poisons. Our model significantly outperforms its unadapted base LLM counterpart and supervised baselines. Furthermore, in a clinical validation study, the model indicates a clinical advantage by outperforming an expert toxicologist in identifying the correct poisons (Micro-F1: 0.644 vs. 0.473). These results demonstrate the potential of RL-aligned LLMs to synthesize unstructured pre-clinical narratives and structured medical data for decision support in high-stakes environments."
+    },
+    {
+      "title": "Calibrated Confidence Expression for Radiology Report Generation",
+      "authors": [
+        "David Bani-Harouni",
+        "Chantal Pellegrini",
+        "Julian Lüers",
+        "Su Hwan Kim",
+        "Markus Baalmann",
+        "Benedikt Wiestler",
+        "Rickmer Braren",
+        "Nassir Navab",
+        "Matthias Keicher"
+      ],
+      "published_date": "2026-03-31",
+      "pdf_url": "https://arxiv.org/pdf/2603.29492v1",
+      "summary": "Safe deployment of Large Vision-Language Models (LVLMs) in radiology report generation requires not only accurate predictions but also clinically interpretable indicators of when outputs should be thoroughly reviewed, enabling selective radiologist verification and reducing the risk of hallucinated findings influencing clinical decisions. One intuitive approach to this is verbalized confidence, where the model explicitly states its certainty. However, current state-of-the-art language models are often overconfident, and research on calibration in multimodal settings such as radiology report generation is limited. To address this gap, we introduce ConRad (Confidence Calibration for Radiology Reports), a reinforcement learning framework for fine-tuning medical LVLMs to produce calibrated verbalized confidence estimates alongside radiology reports. We study two settings: a single report-level confidence score and a sentence-level variant assigning a confidence to each claim. Both are trained using the GRPO algorithm with reward functions based on the logarithmic scoring rule, which incentivizes truthful self-assessment by penalizing miscalibration and guarantees optimal calibration under reward maximization. Experimentally, ConRad substantially improves calibration and outperforms competing methods. In a clinical evaluation we show that ConRad's report level scores are well aligned with clinicians' judgment. By highlighting full reports or low-confidence statements for targeted review, ConRad can support safer clinical integration of AI-assistance for report generation."
+    },
+    {
+      "title": "Mitigating Object Hallucinations in LVLMs via Attention Imbalance Rectification",
+      "authors": [
+        "Han Sun",
+        "Qin Li",
+        "Peixin Wang",
+        "Min Zhang"
+      ],
+      "published_date": "2026-03-25",
+      "pdf_url": "https://arxiv.org/pdf/2603.24058v1",
+      "summary": "Object hallucination in Large Vision-Language Models (LVLMs) severely compromises their reliability in real-world applications, posing a critical barrier to their deployment in high-stakes scenarios such as autonomous driving and medical image analysis. Through systematic empirical investigation, we identify that the imbalanced attention allocation, both across modalities (i.e., vision and language) and within modalities (among individual tokens), exhibits a strong causal correlation with the occurrence of object hallucination. Leveraging this insight, we introduce a novel concept termed attention imbalance, which not only quantifies the degree of attention disparity but also visually delineates the underlying patterns (e.g., over-attentiveness to irrelevant language tokens or under-attentiveness to discriminative visual features) that drive object hallucination. To mitigate object hallucination, we further propose Attention Imbalance Rectification (AIR), a lightweight decoding-time intervention method that reallocates attention weights and adjusts attention distributions to rectify modality-wise and token-wise imbalances. Extensive evaluations on four mainstream LVLMs and three benchmarks (CHAIR, POPE, and MM-Vet) with seven baselines demonstrate that AIR consistently reduces object hallucination rates, achieving up to a 35.1% reduction compared to the baselines, while improving up to 15.9% of LVLMs' general capability across diverse vision-language tasks."
+    },
+    {
+      "title": "MedObvious: Exposing the Medical Moravec's Paradox in VLMs via Clinical Triage",
+      "authors": [
+        "Ufaq Khan",
+        "Umair Nawaz",
+        "L D M S S Teja",
+        "Numaan Saeed",
+        "Muhammad Bilal",
+        "Yutong Xie",
+        "Mohammad Yaqub",
+        "Muhammad Haris Khan"
+      ],
+      "published_date": "2026-03-24",
+      "pdf_url": "https://arxiv.org/pdf/2603.23501v1",
+      "summary": "Vision Language Models (VLMs) are increasingly used for tasks like medical report generation and visual question answering. However, fluent diagnostic text does not guarantee safe visual understanding. In clinical practice, interpretation begins with pre-diagnostic sanity checks: verifying that the input is valid to read (correct modality and anatomy, plausible viewpoint and orientation, and no obvious integrity violations). Existing benchmarks largely assume this step is solved, and therefore miss a critical failure mode: a model can produce plausible narratives even when the input is inconsistent or invalid. We introduce MedObvious, a 1,880-task benchmark that isolates input validation as a set-level consistency capability over small multi-panel image sets: the model must identify whether any panel violates expected coherence. MedObvious spans five progressive tiers, from basic orientation/modality mismatches to clinically motivated anatomy/viewpoint verification and triage-style cues, and includes five evaluation formats to test robustness across interfaces. Evaluating 17 different VLMs, we find that sanity checking remains unreliable: several models hallucinate anomalies on normal (negative-control) inputs, performance degrades when scaling to larger image sets, and measured accuracy varies substantially between multiple-choice and open-ended settings. These results show that pre-diagnostic verification remains unsolved for medical VLMs and should be treated as a distinct, safety-critical capability before deployment."
+    },
+    {
+      "title": "Deterministic Hallucination Detection in Medical VQA via Confidence-Evidence Bayesian Gain",
+      "authors": [
+        "Mohammad Asadi",
+        "Tahoura Nedaee",
+        "Jack W. O'Sullivan",
+        "Euan Ashley",
+        "Ehsan Adeli"
+      ],
+      "published_date": "2026-03-23",
+      "pdf_url": "https://arxiv.org/pdf/2603.21693v1",
+      "summary": "Multimodal large language models (MLLMs) have shown strong potential for medical Visual Question Answering (VQA), yet they remain prone to hallucinations, defined as generating responses that contradict the input image, posing serious risks in clinical settings. Current hallucination detection methods, such as Semantic Entropy (SE) and Vision-Amplified Semantic Entropy (VASE), require 10 to 20 stochastic generations per sample together with an external natural language inference model for semantic clustering, making them computationally expensive and difficult to deploy in practice. We observe that hallucinated responses exhibit a distinctive signature directly in the model's own log-probabilities: inconsistent token-level confidence and weak sensitivity to visual evidence. Based on this observation, we propose Confidence-Evidence Bayesian Gain (CEBaG), a deterministic hallucination detection method that requires no stochastic sampling, no external models, and no task-specific hyperparameters. CEBaG combines two complementary signals: token-level predictive variance, which captures inconsistent confidence across response tokens, and evidence magnitude, which measures how much the image shifts per-token predictions relative to text-only inference. Evaluated across four medical MLLMs and three VQA benchmarks (16 experimental settings), CEBaG achieves the highest AUC in 13 of 16 settings and improves over VASE by 8 AUC points on average, while being fully deterministic and self-contained. The code will be made available upon acceptance."
+    }
+  ]
+}

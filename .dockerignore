@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.idea/
+.git/
+logs/
+data/arxiv_cache/
+data/pdf_uploads/
+*.egg-info/
+.cursor/

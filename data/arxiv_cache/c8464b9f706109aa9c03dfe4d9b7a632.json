@@ -1,0 +1,93 @@
+{
+  "status": "success",
+  "query_used": "all:medical AND all:VQA AND all:hallucination AND all:benchmark AND all:dataset AND all:evaluation",
+  "data": [
+    {
+      "title": "To Agree or To Be Right? The Grounding-Sycophancy Tradeoff in Medical Vision-Language Models",
+      "authors": [
+        "OFM Riaz Rahman Aranya",
+        "Kevin Desai"
+      ],
+      "published_date": "2026-03-23",
+      "pdf_url": "https://arxiv.org/pdf/2603.22623v1",
+      "summary": "Vision-language models (VLMs) adapted to the medical domain have shown strong performance on visual question answering benchmarks, yet their robustness against two critical failure modes, hallucination and sycophancy, remains poorly understood, particularly in combination. We evaluate six VLMs (three general-purpose, three medical-specialist) on three medical VQA datasets and uncover a grounding-sycophancy tradeoff: models with the lowest hallucination propensity are the most sycophantic, while the most pressure-resistant model hallucinates more than all medical-specialist models. To characterize this tradeoff, we propose three metrics: L-VASE, a logit-space reformulation of VASE that avoids its double-normalization; CCS, a confidence-calibrated sycophancy score that penalizes high-confidence capitulation; and Clinical Safety Index (CSI), a unified safety index that combines grounding, autonomy, and calibration via a geometric mean. Across 1,151 test cases, no model achieves a CSI above 0.35, indicating that none of the evaluated 7-8B parameter VLMs is simultaneously well-grounded and robust to social pressure. Our findings suggest that joint evaluation of both properties is necessary before these models can be considered for clinical use. Code is available at https://github.com/UTSA-VIRLab/AgreeOrRight"
+    },
+    {
+      "title": "VinDr-CXR-VQA: A Visual Question Answering Dataset for Explainable Chest X-Ray Analysis with Multi-Task Learning",
+      "authors": [
+        "Dang H. Nguyen",
+        "Hieu H. Pham",
+        "Hao T. Nguyen",
+        "Hieu H. Pham"
+      ],
+      "published_date": "2025-11-01",
+      "pdf_url": "https://arxiv.org/pdf/2511.00504v2",
+      "summary": "We present VinDr-CXR-VQA, a large-scale chest X-ray dataset for explainable Medical Visual Question Answering (Med-VQA) with spatial grounding. The dataset contains 17,597 question-answer pairs across 4,394 images, each annotated with radiologist-verified bounding boxes and clinical reasoning explanations. Our question taxonomy spans six diagnostic types-Where, What, Is there, How many, Which, and Yes/No-capturing diverse clinical intents. To improve reliability, we construct a balanced distribution of 41.7% positive and 58.3% negative samples, mitigating hallucinations in normal cases. Benchmarking with MedGemma-4B-it demonstrates improved performance (F1 = 0.624, +11.8% over baseline) while enabling lesion localization. VinDr-CXR-VQA aims to advance reproducible and clinically grounded Med-VQA research. The dataset and evaluation tools are publicly available at huggingface.co/datasets/Dangindev/VinDR-CXR-VQA."
+    },
+    {
+      "title": "Lingshu: A Generalist Foundation Model for Unified Multimodal Medical Understanding and Reasoning",
+      "authors": [
+        "LASA Team",
+        "Weiwen Xu",
+        "Hou Pong Chan",
+        "Long Li",
+        "Mahani Aljunied",
+        "Ruifeng Yuan",
+        "Jianyu Wang",
+        "Chenghao Xiao",
+        "Guizhen Chen",
+        "Chaoqun Liu",
+        "Zhaodonghui Li",
+        "Yu Sun",
+        "Junao Shen",
+        "Chaojun Wang",
+        "Jie Tan",
+        "Deli Zhao",
+        "Tingyang Xu",
+        "Hao Zhang",
+        "Yu Rong"
+      ],
+      "published_date": "2025-06-08",
+      "pdf_url": "https://arxiv.org/pdf/2506.07044v4",
+      "summary": "Multimodal Large Language Models (MLLMs) have demonstrated impressive capabilities in understanding common visual elements, largely due to their large-scale datasets and advanced training strategies. However, their effectiveness in medical applications remains limited due to the inherent discrepancies between data and tasks in medical scenarios and those in the general domain. Concretely, existing medical MLLMs face the following critical limitations: (1) limited coverage of medical knowledge beyond imaging, (2) heightened susceptibility to hallucinations due to suboptimal data curation processes, (3) lack of reasoning capabilities tailored for complex medical scenarios. To address these challenges, we first propose a comprehensive data curation procedure that (1) efficiently acquires rich medical knowledge data not only from medical imaging but also from extensive medical texts and general-domain data; and (2) synthesizes accurate medical captions, visual question answering (VQA), and reasoning samples. As a result, we build a multimodal dataset enriched with extensive medical knowledge. Building on the curated data, we introduce our medical-specialized MLLM: Lingshu. Lingshu undergoes multi-stage training to embed medical expertise and enhance its task-solving capabilities progressively. Besides, we preliminarily explore the potential of applying reinforcement learning with verifiable rewards paradigm to enhance Lingshu's medical reasoning ability. Additionally, we develop MedEvalKit, a unified evaluation framework that consolidates leading multimodal and textual medical benchmarks for standardized, fair, and efficient model assessment. We evaluate the performance of Lingshu on three fundamental medical tasks, multimodal QA, text-based QA, and medical report generation. The results show that Lingshu consistently outperforms the existing open-source multimodal models on most tasks ..."
+    },
+    {
+      "title": "Localizing Before Answering: A Hallucination Evaluation Benchmark for Grounded Medical Multimodal LLMs",
+      "authors": [
+        "Dung Nguyen",
+        "Minh Khoi Ho",
+        "Huy Ta",
+        "Thanh Tam Nguyen",
+        "Qi Chen",
+        "Kumar Rav",
+        "Quy Duong Dang",
+        "Satwik Ramchandre",
+        "Son Lam Phung",
+        "Zhibin Liao",
+        "Minh-Son To",
+        "Johan Verjans",
+        "Phi Le Nguyen",
+        "Vu Minh Hieu Phan"
+      ],
+      "published_date": "2025-04-30",
+      "pdf_url": "https://arxiv.org/pdf/2505.00744v5",
+      "summary": "Medical Large Multi-modal Models (LMMs) have demonstrated remarkable capabilities in medical data interpretation. However, these models frequently generate hallucinations contradicting source evidence, particularly due to inadequate localization reasoning. This work reveals a critical limitation in current medical LMMs: instead of analyzing relevant pathological regions, they often rely on linguistic patterns or attend to irrelevant image areas when responding to disease-related queries. To address this, we introduce HEAL-MedVQA (Hallucination Evaluation via Localization MedVQA), a comprehensive benchmark designed to evaluate LMMs' localization abilities and hallucination robustness. HEAL-MedVQA features (i) two innovative evaluation protocols to assess visual and textual shortcut learning, and (ii) a dataset of 67K VQA pairs, with doctor-annotated anatomical segmentation masks for pathological regions. To improve visual reasoning, we propose the Localize-before-Answer (LobA) framework, which trains LMMs to localize target regions of interest and self-prompt to emphasize segmented pathological areas, generating grounded and reliable answers. Experimental results demonstrate that our approach significantly outperforms state-of-the-art biomedical LMMs on the challenging HEAL-MedVQA benchmark, advancing robustness in medical VQA."
+    },
+    {
+      "title": "UniVRSE: Unified Vision-conditioned Response Semantic Entropy for Hallucination Detection in Medical Vision-Language Models",
+      "authors": [
+        "Zehui Liao",
+        "Shishuai Hu",
+        "Ke Zou",
+        "Mengyuan Jin",
+        "Yanning Zhang",
+        "Huazhu Fu",
+        "Liangli Zhen",
+        "Yong Xia"
+      ],
+      "published_date": "2025-03-26",
+      "pdf_url": "https://arxiv.org/pdf/2503.20504v2",
+      "summary": "Vision-language models (VLMs) have great potential for medical image understanding, particularly in Visual Report Generation (VRG) and Visual Question Answering (VQA), but they may generate hallucinated responses that contradict visual evidence, limiting clinical deployment. Although uncertainty-based hallucination detection methods are intuitive and effective, they are limited in medical VLMs. Specifically, Semantic Entropy (SE), effective in text-only LLMs, becomes less reliable in medical VLMs due to their overconfidence from strong language priors. To address this challenge, we propose UniVRSE, a Unified Vision-conditioned Response Semantic Entropy framework for hallucination detection in medical VLMs. UniVRSE strengthens visual guidance during uncertainty estimation by contrasting the semantic predictive distributions derived from an original image-text pair and a visually distorted counterpart, with higher entropy indicating hallucination risk. For VQA, UniVRSE works on the image-question pair, while for VRG, it decomposes the report into claims, generates verification questions, and applies vision-conditioned entropy estimation at the claim level. To evaluate hallucination detection, we propose a unified pipeline that generates responses on medical datasets and derives hallucination labels via factual consistency assessment. However, current evaluation methods rely on subjective criteria or modality-specific rules. To improve reliability, we introduce Alignment Ratio of Atomic Facts (ALFA), a novel method that quantifies fine-grained factual consistency. ALFA-derived labels provide ground truth for robust benchmarking. Experiments on six medical VQA/VRG datasets and three VLMs show UniVRSE significantly outperforms existing methods with strong cross-modal generalization."
+    }
+  ]
+}
