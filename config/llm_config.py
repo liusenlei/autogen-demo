@@ -37,7 +37,7 @@ def get_gpt5_config(temperature: float = 0.1, cache_seed: int = 42) -> dict:
     return {
         "config_list": [
             {
-                "model": "qwen/qwen3.6-plus-preview:free",
+                "model": "qwen3.7-max",
                 "api_key": _get_api_key("OPENAI"),
                 "base_url": _get_base_url(),
             }
@@ -56,7 +56,7 @@ def get_cheap_config(temperature: float = 0.3, cache_seed: int = 42) -> dict:
     return {
         "config_list": [
             {
-                "model": "qwen/qwen3.6-plus-preview:free",
+                "model": "qwen3.7-max",
                 "api_key": _get_api_key("OPENAI"),
                 "base_url": _get_base_url(),
             }
